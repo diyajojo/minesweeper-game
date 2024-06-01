@@ -1,0 +1,130 @@
+*
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+.heading 
+{
+  color: white; 
+  font-size: 30px; 
+  margin-top: 20px; 
+}
+.mines 
+{
+  text-align: center;
+  color: white; 
+  z-index: 2;
+  font-size: 25px;
+}
+
+#flagbutton
+{
+  margin-top: 20px;
+  height: 45px;
+  width: 100px;
+  border: none;
+  font-size: 30px;
+  background-color: #b0b0b0; 
+  color: white; 
+  transition: background-color 0.3s; /* Added smooth transition */
+  bottom: 20px; /* Adjust the distance from the bottom */
+  border-radius: 8px; /* Add border radius to the flag button */
+}
+#flagbutton:hover 
+{
+  background-color: #979797;
+  cursor: pointer;
+}
+body 
+{
+  background-color: black;
+  height: 100vh; 
+  margin: 0; 
+  padding: 0; 
+}
+#container 
+{
+  display: flex; 
+  height: 100%;
+  flex-direction: column;
+  justify-content: center; /* Center elements horizontally */
+  align-items: center; /* Center elements vertically */
+}
+
+#board 
+{
+  width: 500px;
+  aspect-ratio: 1;
+  border: 10px solid #979797; 
+  background-color: #b0b0b0; 
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border-radius: 15px; 
+  position: relative; /* Added position relative */
+}
+
+#board div 
+{
+  border: 1px solid #c0c0c0; /* Soft grey border color for tiles */
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s; /* Added smooth transition */
+  border-radius: 8px; 
+}
+
+.clickedTile 
+{
+  background-color: #979797; 
+  color: white; 
+}
+
+.x1 
+{
+  color: #e76346;
+}
+
+.x2 
+{
+  color: #4199d3;
+}
+
+.x3 
+{
+  color: #57da59;
+}
+.x4 
+{
+  color: #bb41d3;
+}
+@media (max-width: 768px) 
+{
+  #board 
+  {
+    width: 90%; /* Adjust board width for smaller screens */
+    height: auto; /* Allow board height to adjust based on content */
+    aspect-ratio: 1;
+    max-width: 400px; /* Set maximum width for board */
+  }
+  .mines
+  {
+    top: 10px; /* Adjust the top position for smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  #flagbutton 
+  {
+    bottom: 10px; /* Adjust the bottom position for smaller screens */
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+  .clickedTile {
+    font-size: 10px;
+  }
+}
+
